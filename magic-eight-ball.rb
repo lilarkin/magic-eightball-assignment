@@ -1,4 +1,5 @@
 require 'pry'
+
 puts 'Welcome to the Magic Eightball!'
 
 @answers = ['Your face.', 'No one likes you, go home.', 
