@@ -1,5 +1,15 @@
 require 'pry'
 
+option = ARGV[0].strip 
+case (option)
+  when 'add_answer'
+    add_answer
+  when 'reset_answer'
+    reset_answers
+  when 'print_answers'
+    print_answers
+end
+
 puts 'Welcome to the Magic Eightball!'
 
 @answers = ['Your face.', 'No one likes you, go home.', 
@@ -7,12 +17,6 @@ puts 'Welcome to the Magic Eightball!'
             'It\'s got its own weather system.', 'Toe pick.', 
             'Like a tremor in the force.', 'you remind me of the babe.']
 @added_answers = []
-
-while true
-
-sleep(0.5)
-
-puts 'Type a question to get an answer, or type QUIT to quit the program.'
 
 def add_answer
   puts 'You must answer your own question.'
@@ -57,16 +61,9 @@ def play_the_game
   end
 end
 
-play_the_game
-
+while true
+  sleep(0.5)  
+  puts 'Type a question to get an answer, or type QUIT to quit the program.'
+  play_the_game
 end
 
-# option = ARGV[0]
-# case (option)
-#   when 'add_answer'
-#     add_answer
-#   when 'reset_answer'
-#     reset_answers
-#   when 'print_answers'
-#     print_answers
-# end
